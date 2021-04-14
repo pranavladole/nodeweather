@@ -5,7 +5,7 @@ const request = require('request')
 const geocode = require('../express1/src/app2')
 
 const app = express()
-
+const port = process.env.PORT || 3000
 
 app.engine('hbs', require('hbs').__express);
 
@@ -116,8 +116,13 @@ app.get('/products' , (req,res)=>{
 //     })
 //     })
 
-app.listen(3000 , ()=>{
-    console.log("running here")
-}) 
+// app.listen(3000 , ()=>{
+//     console.log("running here")
+// }) 
 
 
+
+app.listen(port , ()=>{
+        console.log("running "+port)
+    }) 
+    
