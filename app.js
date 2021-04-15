@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path');
 const hbs = require('hbs')
 const request = require('request')
-const geocode = require('../express1/src/app2')
+const geocode = require('./src/app2')
 
 const app = express()
 const PORT = process.env.PORT || 3000
