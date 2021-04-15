@@ -27,11 +27,13 @@ const message0 = document.querySelector('#message0')
 const message1 = document.querySelector('#message1')
 const message2 = document.querySelector('#message2')
 const message3 = document.querySelector('#message3')
+const message4 = document.querySelector('#message4')
 
 message0.textContent = ''
 message1.textContent = ''
 message2.textContent = ''
 message3.textContent = ''
+message4.textContent = ''
 
 
  weatherForm.addEventListener('submit' , (e)=>{
@@ -41,8 +43,8 @@ message3.textContent = ''
       // console.log(location)
       message1.textContent = 'Loading...'
 
-     fetch('http://localhost:3000/weather?address='+ location).then((response)=>{
-
+   //  fetch('http://localhost:3000/weather?address='+ location).then((response)=>{
+    fetch('/weather?address='+ location).then((response)=>{
         response.json().then((data)=>{
 
             if(data.error){
@@ -53,6 +55,7 @@ message3.textContent = ''
                 message1.textContent = data.data.location
                 message2.textContent = data.data.long
                 message3.textContent = data.data.lat
+                message4.textContent = data.data.center
             }
 
             

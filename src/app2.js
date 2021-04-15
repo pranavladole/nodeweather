@@ -36,7 +36,8 @@ const geocode  = (address,callback) =>{
                {
                 lat: "Latitude " + response.body.features[0].center[0],
                  long: "Longitude " + response.body.features[0].center[1],
-                 location: "location " + response.body.features[0].place_name
+                 location: "Location " + response.body.features[0].place_name,
+                 center : "center " + response.body.features[0].center
                }
             )
         }
