@@ -23,7 +23,7 @@ const geocode  = (address,callback) =>{
 
     request({url:url , json:true}  , (error,response)=>{
         if(error){
-            // console.log("error occured....")
+             console.log("error occured....")
             callback('unable to connect',undefined)
         }
         else if(response.body.features.length === 0){
